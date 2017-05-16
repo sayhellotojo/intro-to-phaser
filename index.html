@@ -13,14 +13,23 @@
 
 <body>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
 var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
 function preload() {
+
+    game.load.image('sky', 'assets/background.gif'); // sky names image, pulls image
+    game.load.image('ground', 'assets/platform.png');
+    game.load.image('mouse', 'assets/mouse.png');
+    game.load.spritesheet('rick', 'assets/rick-sprite.png', 76, 44, 5); //png sprite sheet - width, height, number of frames 6 = (0,1,2,3,4,5)
+
 }
 
 function create() {
+
+	game.add.sprite(0, 0, 'mouse');
+	
 }
 
 function update() {
