@@ -94,6 +94,9 @@ function create() {
 	}
 
 
+	//  The score
+	scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
 	//  Our controls.
 	cursors = game.input.keyboard.createCursorKeys();
 
@@ -147,6 +150,11 @@ function collectMouse (player, mouse) {
 
     // Removes the mouse from the screen
     mouse.kill();
+
+		//  Add and update the score
+		score += 10;
+		scoreText.text = 'Score: ' + score;
+
 
 }
 
