@@ -73,15 +73,13 @@ function create() {
 		player.animations.add('left', [0, 1], 5, true); //array frame 0 and 1 from the 6 arrays
 	player.animations.add('right', [4, 5], 5, true); //array frame 4 and 5 from the 6 arrays
 
-	function update() {
-
-	    //  Collide the player and the mice with the platforms
-	    game.physics.arcade.collide(player, platforms);
-
-
 }
 
 function update() {
+
+		//  Collide the player and the mice with the platforms
+		game.physics.arcade.collide(player, platforms);
+
 }
 
 </script>
